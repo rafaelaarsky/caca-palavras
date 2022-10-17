@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        td{
+            padding: 8px;
+        }
+        .p4, .p12, .p16, .p21, .p24, .p25, .p28, .p40, .p52, .p64, .p38, .p51, .p76, .p87, .p112, .p101, .p90, .p65, .p54, .p31, .p43,.p79, .p91, .p32, .p33, .p34,.p35,.p36, .p44, .p45, .p46, .p48, .p56, .p68, .p80, .p92, .p57, .p69, .p81, .p93, .p94, .p106, .p118, .p130, .p142, .p60, .p72, .p84,.p96{
+            background-color: aquamarine;
+        }
+        .tabela{
+            margin: auto;
+            height: 450px;
+            width: 450px;
+            margin-top: 40px;
+        }
+        ul li {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 20px;
+        margin: auto;
+        }
+        .legenda{
+            width: 600px;
+            margin: auto;
+        }
+
+    </style>
+    <script>
+
+        function Celulas(){
+        
+        //Matrizes são vetores dentro de um único vetor
+        matriz = new Array;
+        matriz = [
+        //    0      1       2       3       4       5       6       7       8       9       10      11
+            ["E",	"E",	"R",	"G",	"E",	"L",	"I",	"Y",	"B",	"I",	"E",	"Q"], //0
+            ["I",	"O",	"S",	"I",	"E",	"E",	"E",	"D",	"M",	"T",	"O",	"U"], //1
+            ["M",	"N",	"N",	"R",	"F",	"A",	"C",	"O",	"M",	"E",	"T",	"A"], //2
+            ["T",	"A",	"R",	"A",	"T",	"D",	"C",	"I",	"B",	"R",	"V",	"D"], //3
+            ["I",	"E",	"L",	"F",	"I",	"H",	"T",	"R",	"O",	"A",	"Y",	"R"], //4 
+            ["E",	"T",	"H",	"A",	"I",	"I",	"S",	"M",	"L",	"S",	"L",	"A"], //5
+            ["R",	"R",	"F",	"L",	"U",	"O",	"B",	"Ã",	"A",	"C",	"B",	"D"], //6
+            ["E",	"U",	"A",	"A",	"V",	"E",	"N",	"O",	"V",	"O",	"E",	"O"], //7 
+            ["U",	"F",	"T",	"G",	"T",	"N",	"V",	"H",	"S",	"L",	"I",	"H"], //8
+            ["B",	"C",	"S",	"A",	"A",	"E",	"O",	"I",	"L",	"I",	"H",	"O"], //9
+            ["A",	"T",	"D",	"D",	"O",	"F",	"V",	"L",	"F",	"V",	"F",	"T"], //10
+            ["P",	"D",	"R",	"T",	"I",	"R",	"H",	"K",	"F",	"A",	"H",	"A"], //11
+            
+        ];
+
+        palavras = new Array;
+        palavras = [
+            matriz[0][3], matriz[0][11], 
+            matriz[1][3], matriz[1][8], matriz[1][11], 
+            matriz[2][0], matriz[2][3], matriz[2][6], matriz[2][7], matriz[2][8], matriz[2][9], matriz[2][10], matriz[2][11], 
+            matriz[3][1], matriz[3][3], matriz[3][6], matriz[3][7], matriz[3][8], matriz[3][9], matriz[3][11],
+            matriz[4][2], matriz[4][3], matriz[4][5], matriz[4][7], matriz[4][8], matriz[4][11], 
+            matriz[5][3], matriz[5][4], matriz[5][7], matriz[5][8], matriz[5][11],
+            matriz[6][3], matriz[6][6], matriz[6][7], matriz[6][8], matriz[6][11],
+            matriz[7][2], matriz[7][5], matriz[7][6], matriz[7][7], matriz[7][8], matriz[7][9], matriz[7][11],
+            matriz[8][4], matriz[8][9],
+            matriz[9][3], matriz[9][9],
+            matriz[10][9],
+            matriz[11][9],
+        ] ;
+
+        console.log(palavras);
+
+        var i = 0;
+
+        for (linha=0; linha<12;linha++){
+            document.write("<tr>");
+            for (coluna=0; coluna<12;coluna++) {
+                i++;
+                document.write("<td class='p" + i + "'>" + matriz[linha][coluna] + "</td>");
+            }
+            document.write("</tr>");
+        }
+    }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="tabela">
+        <table>
+            <script> Celulas() </script>
+        </table>
+    </div>
+    <div class="legenda">
+        <ul>
+            <li>Mala</li>
+            <li>Cometa</li>
+            <li>Girafa</li>
+            <li>Trombeta</li>
+            <li>Bola</li>
+            <li>Novo</li>
+            <li>Oliva</li>
+            <li>Quadrado</li>
+            <li>Mochila</li>
+            <li>Irmão</li>
+        </ul>
+    </div>
+</body>
+</html>
